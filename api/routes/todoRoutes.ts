@@ -4,6 +4,6 @@ import { getAllTodos, addTodo } from '../controllers/todoController';
 const router: Router = Router();
 
 router.get('/todos', getAllTodos);
-router.post('/add-todo', addTodo);
+router.post('/todos', addTodo);
 
 export default router;

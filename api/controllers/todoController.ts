@@ -16,8 +16,8 @@ export const addTodo = async (req: Request, res: Response): Promise<void> => {
         const body = req.body as Pick<ITodo, "name" | "done">;
 
         const todo: ITodo = new Todo({
-            name: body.name,
-            done: body.done
+            name: body?.name,
+            done: body?.done
         });
 
         const newTodo: ITodo = await todo.save();
